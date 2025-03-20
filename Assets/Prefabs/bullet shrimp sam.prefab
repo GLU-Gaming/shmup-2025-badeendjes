@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2446796639916973748}
   - component: {fileID: 6884075938988321018}
   - component: {fileID: 6066571373811908965}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: bullet shrimp sam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
