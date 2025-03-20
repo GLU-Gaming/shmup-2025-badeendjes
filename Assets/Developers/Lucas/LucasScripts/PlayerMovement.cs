@@ -14,7 +14,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.AddRelativeForce(0, 0, Input.GetAxisRaw("Vertical") * 50);
+        rb.AddRelativeForce(0, 0, Input.GetAxisRaw("Horizontal") * 50);
 
     }
 }
