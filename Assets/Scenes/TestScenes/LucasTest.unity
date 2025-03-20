@@ -421,7 +421,7 @@ Rigidbody:
   m_GameObject: {fileID: 1082650888}
   serializedVersion: 4
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 1
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -517,6 +517,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d854beafb0c33654b90a613bff864367, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jump: {x: 0, y: 0, z: 0}
+  jumpForce: 6
+  grounded: 0
 --- !u!33 &1082650893
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -642,9 +645,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2030391216}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.8714, y: -0.99, z: -6.3497}
-  m_LocalScale: {x: 7.270202, y: 1, z: 5.760799}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.871401, y: -0.99, z: -6.349702}
+  m_LocalScale: {x: 7.270202, y: 1, z: 5.7607985}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -655,5 +658,5 @@ SceneRoots:
   m_Roots:
   - {fileID: 676757946}
   - {fileID: 1056999324}
-  - {fileID: 1082650894}
   - {fileID: 2030391220}
+  - {fileID: 1082650894}

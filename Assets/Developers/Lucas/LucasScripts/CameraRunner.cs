@@ -4,11 +4,15 @@ using UnityEngine.UIElements;
 public class CameraRunner : MonoBehaviour
 {
     [SerializeField] Transform player;
+    
+
 
     private void Start()
     {
       
     }
+
+ 
 
     private void Update()
     {
