@@ -185,7 +185,7 @@ MonoBehaviour:
   speed: 5
   height: 3
   fireRate: 0.5
-  bulletPrefab: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
+  bulletPrefab: {fileID: 9126164845390546553, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
   firePoint: {fileID: 528046434}
 --- !u!65 &635434484
 BoxCollider:
@@ -231,7 +231,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 06d3c434af918814d83e6b47ae24c204, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,7 +372,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 06d3c434af918814d83e6b47ae24c204, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -693,6 +693,63 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1001 &3028199431469977602
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 3.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.393029
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417851759818748958, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9126164845390546553, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
+      propertyPath: m_Name
+      value: bulletShockRaySam
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
 --- !u!1001 &3377077190041331939
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -701,10 +758,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2350103119990550870, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.27842677
-      objectReference: {fileID: 0}
     - target: {fileID: 2350103119990550870, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -763,3 +816,4 @@ SceneRoots:
   - {fileID: 984641210}
   - {fileID: 3377077190041331939}
   - {fileID: 635434487}
+  - {fileID: 3028199431469977602}
