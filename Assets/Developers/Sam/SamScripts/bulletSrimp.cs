@@ -1,10 +1,17 @@
+using System.Collections;
 using UnityEngine;
 
 public class bulletSrimp : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] float speed = 10f;
-    private Transform target;
+    [SerializeField] float time = 10;
+    [SerializeField] float size = 5;
+    [SerializeField] float desTime = 2;
+    [SerializeField] float growSpeed;
+
+    private float currentTime;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,14 +19,28 @@ public class bulletSrimp : MonoBehaviour
 
         rb = GetComponent<Rigidbody>();
         rb.linearVelocity = transform.forward * speed;
-        Destroy(gameObject, 2);
+        StartCoroutine(ScaleOverTime(time));
+        Destroy(gameObject, desTime);
 
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-
+        Debug.Log(collision.gameObject);
         Destroy(gameObject);
+        
+
+    }
+
+    private IEnumerator ScaleOverTime(float duration)
+    {
+        currentTime = 0;
+        while (duration >= currentTime)
+        {
+            currentTime += Time.deltaTime * growSpeed;
+            transform.localScale = new Vector3(1, Mathf.Lerp(transform.localScale.y, size, currentTime / time), 1);
+            yield return null;
+        }
 
     }
 }
