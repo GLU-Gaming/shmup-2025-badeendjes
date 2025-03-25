@@ -36,15 +36,11 @@ public class PlayerShooting : MonoBehaviour
         isShooting = true;
         while (isShooting)
         {
-            Debug.Log("Shoot!");
+           
             Instantiate(Bullet, transform.position, transform.rotation);
             yield return new WaitForSeconds(Cooldown);
         }
     }
     
-    private void OnMouse()
-    {
-        Debug.Log("POW");
-        Instantiate(Bullet, transform.position, transform.rotation);
-    }
+    
 }
