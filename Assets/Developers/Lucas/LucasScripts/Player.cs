@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
 
 
     private bool isInvincible;
+    private float invincibleTimer;
     private int lives = 3;
     
     
@@ -54,18 +55,22 @@ public class Player : MonoBehaviour
        {
             isInvincible = true;
        }
-       else 
-       {
-            isInvincible = false;
-       }
+       
 
         if (isInvincible) 
         {
-            movingSpeed = 150f;
+            movingSpeed = 120f;
+            invincibleTimer += Time.deltaTime;
         }
         else 
         { 
             movingSpeed = 30f; 
+        }
+        if (invincibleTimer >= 0.2) 
+        {
+            rb.AddForce(-100, 0, 0);
+            isInvincible = false;
+            invincibleTimer = 0;
         }
     }
 
