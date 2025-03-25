@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     private bool isInvincible;
     private float invincibleTimer;
     private int lives = 3;
+
+    [SerializeField] private TextMeshProUGUI LiveCounter;
     
     
 
@@ -51,6 +54,8 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+
+
        if(Input.GetKey(KeyCode.LeftShift)) 
        {
             isInvincible = true;
@@ -68,10 +73,12 @@ public class Player : MonoBehaviour
         }
         if (invincibleTimer >= 0.2) 
         {
-            rb.AddForce(-100, 0, 0);
+            
             isInvincible = false;
             invincibleTimer = 0;
         }
+
+        LiveCounter.text = ("Lives = " + lives).ToString();
     }
 
 
