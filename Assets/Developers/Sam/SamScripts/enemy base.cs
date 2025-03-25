@@ -10,13 +10,15 @@ public abstract class enemybase : MonoBehaviour
     [SerializeField] float fireRate = 0f;
     private float nextFireTime = 0f;
 
-    
+    [SerializeField] float maxHealth = 50f;
+    private float currentHealth;
 
     Vector3 pos;
 
     private void Start()
     {
         pos = transform.position;
+        currentHealth = maxHealth;
     }
 
     protected virtual void Update()
@@ -40,5 +42,23 @@ public abstract class enemybase : MonoBehaviour
     {
 
     }
-   
+
+    protected virtual void OnCollisionEnter(Collision collision) {
+
+        if (collision.gameObject.tag == "bullet") {
+
+            currentHealth = currentHealth - 1;
+            checkIfDead();
+        }
+    
+    }
+
+    protected virtual void checkIfDead() {
+        if (currentHealth <= 0) { 
+            Destroy(gameObject);
+        
+        }
+    
+    }
+
 }
