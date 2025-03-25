@@ -7,22 +7,23 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float Cooldown = 1f;
     private float cooldownCounter;
     private bool isShooting;
-    
 
-   
+
+
     void Update()
     {
-        /*if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButton(0))
         {
-            if (cooldownCounter >= Cooldown) {
+            if (cooldownCounter >= Cooldown)
+            {
                 Debug.Log("POW");
                 Instantiate(Bullet, transform.position, transform.rotation);
                 cooldownCounter = 0;
-            } 
+            }
         }
-        cooldownCounter += Time.deltaTime;*/
+        cooldownCounter += Time.deltaTime;
 
-        if (Input.GetMouseButtonDown(0) && !isShooting)
+        /*if (Input.GetMouseButtonDown(0) && !isShooting)
         {
             StartCoroutine(Shoot());
         }
@@ -40,7 +41,8 @@ public class PlayerShooting : MonoBehaviour
             Instantiate(Bullet, transform.position, transform.rotation);
             yield return new WaitForSeconds(Cooldown);
         }
+    }*/
+
+
     }
-    
-    
 }
