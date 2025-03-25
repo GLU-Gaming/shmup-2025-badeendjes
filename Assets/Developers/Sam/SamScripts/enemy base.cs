@@ -45,7 +45,7 @@ public abstract class enemybase : MonoBehaviour
 
     protected virtual void OnCollisionEnter(Collision collision) {
 
-        if (collision.gameObject.tag == "bullet") {
+        if (collision.gameObject.tag == "bullets") {
 
             currentHealth = currentHealth - 1;
             checkIfDead();
