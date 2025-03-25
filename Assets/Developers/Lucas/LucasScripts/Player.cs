@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -6,11 +7,15 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     public Vector3 jump;
     public bool grounded;
-    [SerializeField] public float jumpForce = 8.0f;
+    [SerializeField] private float jumpForce = 8.0f;
+    [SerializeField] private float movingSpeed = 30f;
 
 
     private bool isInvincible;
+    private float invincibleTimer;
     private int lives = 3;
+
+    [SerializeField] private TextMeshProUGUI LiveCounter;
     
     
 
@@ -38,7 +43,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(Input.GetAxisRaw("Horizontal") * 50f, 0f, 0f);
+        rb.AddForce(Input.GetAxisRaw("Horizontal") * movingSpeed, 0f, 0f);
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             grounded = false;
@@ -49,12 +54,33 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+
+
        if(Input.GetKey(KeyCode.LeftShift)) 
        {
             isInvincible = true;
-            
        }
+       
+
+        if (isInvincible) 
+        {
+            movingSpeed = 120f;
+            invincibleTimer += Time.deltaTime;
+        }
+        else 
+        { 
+            movingSpeed = 30f; 
+        }
+        if (invincibleTimer >= 0.2) 
+        {
+            
+            isInvincible = false;
+            invincibleTimer = 0;
+        }
+
+        LiveCounter.text = ("Lives = " + lives).ToString();
     }
+
 
 
 }
