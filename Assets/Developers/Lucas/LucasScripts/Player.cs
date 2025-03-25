@@ -6,7 +6,8 @@ public class Player : MonoBehaviour
     private Rigidbody rb;
     public Vector3 jump;
     public bool grounded;
-    [SerializeField] public float jumpForce = 8.0f;
+    [SerializeField] private float jumpForce = 8.0f;
+    [SerializeField] private float movingSpeed = 30f;
 
 
     private bool isInvincible;
@@ -38,7 +39,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        rb.AddForce(Input.GetAxisRaw("Horizontal") * 50f, 0f, 0f);
+        rb.AddForce(Input.GetAxisRaw("Horizontal") * movingSpeed, 0f, 0f);
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             grounded = false;
@@ -52,9 +53,22 @@ public class Player : MonoBehaviour
        if(Input.GetKey(KeyCode.LeftShift)) 
        {
             isInvincible = true;
-            
        }
+       else 
+       {
+            isInvincible = false;
+       }
+
+        if (isInvincible) 
+        {
+            movingSpeed = 200f;
+        }
+        else 
+        { 
+            movingSpeed = 30f; 
+        }
     }
+
 
 
 }
