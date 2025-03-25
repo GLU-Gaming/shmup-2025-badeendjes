@@ -125,6 +125,7 @@ MonoBehaviour:
   speed: 5
   height: 3
   fireRate: 0.5
+  maxHealth: 50
   bulletPrefab: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
   firePoint: {fileID: 2450615675614961872}
 --- !u!1 &6978092479407344499
