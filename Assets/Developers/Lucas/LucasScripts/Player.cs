@@ -61,7 +61,7 @@ public class Player : MonoBehaviour
 
         if (isInvincible) 
         {
-            movingSpeed = 200f;
+            movingSpeed = 150f;
         }
         else 
         { 
