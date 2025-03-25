@@ -4,16 +4,18 @@ public class Bullet : MonoBehaviour
 {
     private Rigidbody rb;
     [SerializeField] private float speed;
+    [SerializeField] float desTime = 2;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.linearVelocity = transform.forward * speed;
-
+        Destroy(gameObject, desTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter(Collision collision)
     {
-        
+        Debug.Log(collision.gameObject);
+        Destroy(gameObject);
+
     }
 }

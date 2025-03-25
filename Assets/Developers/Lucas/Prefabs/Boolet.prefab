@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6297631242030482645}
   - component: {fileID: 7096499013311006504}
   - component: {fileID: 575556259067473230}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Boolet
-  m_TagString: Untagged
+  m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -57,6 +57,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
+  desTime: 2
 --- !u!23 &6297631242030482645
 MeshRenderer:
   m_ObjectHideFlags: 0

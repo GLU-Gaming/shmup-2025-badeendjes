@@ -124,7 +124,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   time: 5
-  size: 5
+  size: 3
   desTime: 10
   growSpeed: 0.5
 --- !u!54 &6066571373811908965
