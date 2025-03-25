@@ -8,6 +8,11 @@ public class StartQuitButtons : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    public void menuLoad()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void exitApplication()
     {
         Application.Quit();
