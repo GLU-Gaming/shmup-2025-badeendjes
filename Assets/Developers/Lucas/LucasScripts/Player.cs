@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     private float dashCooldownCounter;
     [SerializeField] private GameObject dashParticle;
     [SerializeField] private GameObject particlePoint;
+    private float Direction;
 
     private int lives = 3;
     [SerializeField] private TextMeshProUGUI LiveCounter;
@@ -58,9 +59,10 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        Direction = Input.GetAxisRaw("Horizontal") * movingSpeed;
 
 
-       if(Input.GetKey(KeyCode.LeftShift) && dashCooldownCounter >= 2f) 
+       if (Input.GetKey(KeyCode.LeftShift) && dashCooldownCounter >= 2f) 
        {
             isInvincible = true;
             dashCooldownCounter = 0;
@@ -70,19 +72,27 @@ public class Player : MonoBehaviour
         if (isInvincible) 
         {
             //Instantiate(dashParticle, particlePoint.position, particlePoint.rotation);
-            movingSpeed = 70f;
+            movingSpeed = 160f;
             invincibleTimer += Time.deltaTime;
-            dashParticle.SetActive(true);
+            //dashParticle.SetActive(true);
         }
         else 
         { 
             movingSpeed = 30f;
             dashCooldownCounter += Time.deltaTime;
-            dashParticle.SetActive(false);
+            //dashParticle.SetActive(false);
         }
-        if (invincibleTimer >= 0.5) 
+        if (invincibleTimer >= 0.2) 
         {
-            
+            if (Direction >= 0)
+            {
+                rb.AddForce(movingSpeed * -7, 0, 0);
+            }
+            if (Direction <= 0)
+            {
+                rb.AddForce(movingSpeed * 7, 0, 0);
+            }
+
             isInvincible = false;
             invincibleTimer = 0;
         }
