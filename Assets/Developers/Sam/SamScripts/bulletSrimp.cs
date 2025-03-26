@@ -9,8 +9,8 @@ public class bulletSrimp : MonoBehaviour
     [SerializeField] float size = 5;
     [SerializeField] float desTime = 2;
     [SerializeField] float growSpeed;
-    private float siseX = 0.2f;
-    private float siseZ = 0.2f;
+    private float siseX = 1f;
+    private float siseZ = 1f;
 
     private float currentTime;
 
