@@ -231,10 +231,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -1.62
       objectReference: {fileID: 0}
+    - target: {fileID: 1614481036283500888, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
     - target: {fileID: 2713106200706429638, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2795412912028918830, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
     - target: {fileID: 3381415088860981372, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.54
@@ -287,6 +295,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4818830433020489094, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
+    - target: {fileID: 4999707285022167916, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
+    - target: {fileID: 5373939893915924808, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
+    - target: {fileID: 5424138418642478893, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
+    - target: {fileID: 6751615731859302121, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
+    - target: {fileID: 6913765655330941018, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 7e728296daa1b8c42aef92cc8b5380f4, type: 2}
     - target: {fileID: 8251450886613305763, guid: 166fda8ef14be7b44b41fb05d7bd0423, type: 3}
       propertyPath: Cooldown
       value: 0.3
