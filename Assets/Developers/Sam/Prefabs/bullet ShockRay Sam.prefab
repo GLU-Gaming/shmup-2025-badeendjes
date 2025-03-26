@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4951271699106733990}
   - component: {fileID: 5160389980915035094}
   m_Layer: 10
-  m_Name: bulletShockRaySam
+  m_Name: bullet ShockRay Sam
   m_TagString: bullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

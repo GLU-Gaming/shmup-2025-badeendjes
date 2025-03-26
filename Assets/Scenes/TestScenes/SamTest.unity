@@ -438,6 +438,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96a3fc798c826e049ba9064daa686825, type: 3}
+--- !u!1001 &2833665094376076507
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2828368841275547617, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_Name
+      value: 'bullet shockray Lazer '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.341859
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.78398323
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8103635343910737104, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ddceaca01d4be7741b76e630c58825dc, type: 3}
 --- !u!1001 &3028199431469977602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -564,6 +621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shockray
       objectReference: {fileID: 0}
+    - target: {fileID: 1256671520440192323, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.1865396
@@ -617,13 +678,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2450615675614961872, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450615675614961872, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 2450615675614961872, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5342256746677895994, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
     - target: {fileID: 6842581158133382336, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
       propertyPath: m_Name
       value: PistolSrimp
       objectReference: {fileID: 0}
     - target: {fileID: 6842581158133382336, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7945029148262433314, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
       propertyPath: m_LocalPosition.x
@@ -681,3 +758,4 @@ SceneRoots:
   - {fileID: 282067781596872447}
   - {fileID: 3028199431469977602}
   - {fileID: 3868945690656795101}
+  - {fileID: 2833665094376076507}

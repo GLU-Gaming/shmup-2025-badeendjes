@@ -13,6 +13,7 @@ public class shrimpmain : enemybase
 
     protected void Shoot()
     {
+        
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
