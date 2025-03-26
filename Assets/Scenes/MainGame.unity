@@ -585,6 +585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PistolSrimp
       objectReference: {fileID: 0}
+    - target: {fileID: 6842581158133382336, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7945029148262433314, guid: 126b3cefa2cc5d64fb33518d686f8594, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.7
