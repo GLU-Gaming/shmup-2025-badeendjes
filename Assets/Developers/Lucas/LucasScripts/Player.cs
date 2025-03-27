@@ -16,7 +16,7 @@ public class Player : MonoBehaviour
     private float invincibleTimer;
     private float dashCooldownCounter;
     [SerializeField] private GameObject dashParticle;
-    [SerializeField] private GameObject particlePoint;
+    [SerializeField] private BoxCollider Collider;
     private float Direction;
 
     private int lives = 3;
@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.CompareTag("bullets") && !isInvincible) 
         {
             lives = lives - 1;
+            return;
         }
     }
     void OnCollisionStay()
@@ -72,25 +73,28 @@ public class Player : MonoBehaviour
         if (isInvincible) 
         {
             //Instantiate(dashParticle, particlePoint.position, particlePoint.rotation);
-            movingSpeed = 160f;
+            movingSpeed = 100f;
             invincibleTimer += Time.deltaTime;
-            //dashParticle.SetActive(true);
+            dashParticle.SetActive(true);
+            Collider.enabled = false;
+
         }
         else 
         { 
             movingSpeed = 30f;
             dashCooldownCounter += Time.deltaTime;
-            //dashParticle.SetActive(false);
+            dashParticle.SetActive(false);
+            Collider.enabled = true;
         }
-        if (invincibleTimer >= 0.2) 
+        if (invincibleTimer >= 0.4) 
         {
             if (Direction >= 0)
             {
-                rb.AddForce(movingSpeed * -7, 0, 0);
+                rb.AddForce(movingSpeed * -14, 0, 0);
             }
             if (Direction <= 0)
             {
-                rb.AddForce(movingSpeed * 7, 0, 0);
+                rb.AddForce(movingSpeed * 14, 0, 0);
             }
 
             isInvincible = false;
