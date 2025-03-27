@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8118402653489754511}
   - component: {fileID: 2027411168192174814}
   - component: {fileID: 5552675637125885098}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: windLazer  1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 301048246995527697}
   - component: {fileID: 6860671361186086586}
   - component: {fileID: 6241147647647579466}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: 'bullet shockray Lazer '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -187,9 +187,9 @@ GameObject:
   - component: {fileID: 3339990108062350535}
   - component: {fileID: 4951271699106733990}
   - component: {fileID: 5160389980915035094}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bullet ShockRay Sam
-  m_TagString: bullets
+  m_TagString: enemybullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
