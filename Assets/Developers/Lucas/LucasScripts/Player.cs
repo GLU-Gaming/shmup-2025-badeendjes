@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 8.0f;
     [SerializeField] private float movingSpeed = 30f;
 
+    private bool cantBeHit;
+    private float cantBeHitCounter;
 
     private bool isInvincible;
     private float invincibleTimer;
@@ -32,10 +34,11 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("bullets") && !isInvincible) 
+        if (collision.gameObject.CompareTag("bullets") && !isInvincible && !cantBeHit) 
         {
             lives = lives - 1;
-            return;
+            cantBeHit = true;
+            
         }
     }
     void OnCollisionStay()
@@ -107,6 +110,14 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("EndScreen");
         } */
+        if (cantBeHit == true) 
+        {
+            cantBeHitCounter = Time.deltaTime;
+        }
+        if (cantBeHitCounter >= 2) 
+        {
+            cantBeHit = false;
+        }
     }
 
     public void Youwin() 
