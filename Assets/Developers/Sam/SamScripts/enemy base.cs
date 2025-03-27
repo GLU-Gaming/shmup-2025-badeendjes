@@ -15,13 +15,13 @@ public abstract class enemybase : MonoBehaviour
 
     Vector3 pos;
 
-    private void Start()
+    public virtual void Start()
     {
         pos = transform.position;
         currentHealth = maxHealth;
     }
 
-    protected virtual void Update()
+    public virtual void Update()
     {
         //calculate what the new Y position will be
         float newY = Mathf.Sin(Time.time * speed) * height + pos.y;
@@ -29,7 +29,7 @@ public abstract class enemybase : MonoBehaviour
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
 
 
-        if(Time.time >= nextFireTime){
+        if (Time.time >= nextFireTime){
 
             Attack();
             nextFireTime = Time.time + fireRate;

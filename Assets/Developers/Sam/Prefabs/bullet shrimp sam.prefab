@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6696200753012058619}
   - component: {fileID: 3880307488872201580}
   - component: {fileID: 6977995739640971290}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bullet shrimp shockwave sam
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -123,9 +123,9 @@ GameObject:
   - component: {fileID: 2446796639916973748}
   - component: {fileID: 6884075938988321018}
   - component: {fileID: 6066571373811908965}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: bullet shrimp sam
-  m_TagString: bullets
+  m_TagString: enemybullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
