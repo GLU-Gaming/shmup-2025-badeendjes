@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4021979893514665694}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 5202281710535119357}
   - component: {fileID: 3805697806182503473}
   - component: {fileID: 1921714219201907895}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: ShockrayAf
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.1865396, y: 0, z: -0.3870163}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0795, y: 1.0795, z: 1.0795}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5632509024697245979}
@@ -102,9 +102,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  height: 3
-  fireRate: 0.5
-  maxHealth: 50
+  height: 1
+  fireRate: 2
+  maxHealth: 15
+  tijdelijkWin: {fileID: 0}
   bulletPrefab: {fileID: 9126164845390546553, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
   firePoint: {fileID: 4021979893514665694}
 --- !u!1 &2582537603817803859
@@ -118,7 +119,7 @@ GameObject:
   - component: {fileID: 5632509024697245979}
   - component: {fileID: 48452261549350877}
   - component: {fileID: 2670462364428076252}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +205,7 @@ GameObject:
   - component: {fileID: 2023574648924092113}
   - component: {fileID: 6151250002614364702}
   - component: {fileID: 6278077586826964934}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Power Circles
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +291,7 @@ GameObject:
   - component: {fileID: 7375266369135436093}
   - component: {fileID: 2591332577290888057}
   - component: {fileID: 6022021962307447895}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Spike
   m_TagString: Untagged
   m_Icon: {fileID: 0}
