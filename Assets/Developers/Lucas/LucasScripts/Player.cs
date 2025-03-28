@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("bullets") && !isInvincible && !cantBeHit) 
+        if (collision.gameObject.CompareTag("enemybullet") && !isInvincible && !cantBeHit) 
         {
             lives = lives - 1;
             cantBeHit = true;
@@ -106,10 +106,10 @@ public class Player : MonoBehaviour
 
         LiveCounter.text = ("Lives = " + lives).ToString();
 
-        /* if (lives <= 0) 
-        {
+         if (lives <= 0) 
+         {
             SceneManager.LoadScene("EndScreen");
-        } */
+         } 
         if (cantBeHit == true) 
         {
             cantBeHitCounter = Time.deltaTime;

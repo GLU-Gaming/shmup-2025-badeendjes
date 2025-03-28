@@ -133,9 +133,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  height: 3
-  fireRate: 0.5
-  maxHealth: 50
+  height: 1
+  fireRate: 2
+  maxHealth: 10
+  tijdelijkWin: {fileID: 0}
   bulletPrefab: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
   firePoint: {fileID: 6778256801153177977}
 --- !u!65 &728521906745760961

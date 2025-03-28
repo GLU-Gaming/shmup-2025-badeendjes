@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  height: 3
+  height: 1
   fireRate: 0
-  maxHealth: 50
+  maxHealth: 5
   tijdelijkWin: {fileID: 0}
   resetTime: 3
   anglerSpeed: 5
