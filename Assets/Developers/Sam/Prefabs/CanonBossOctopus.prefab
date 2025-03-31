@@ -96,13 +96,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6473237058830961185}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fa3daed9ba39e3341a0c9224a355f5e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  height: 3
+  fireRate: 0.1
+  bulletPrefab: {fileID: 529385153903017415, guid: fbd28e516f364f346b205d5d69aa6906, type: 3}
+  firePoint: {fileID: 995652170715300391}
 --- !u!95 &1146982562223361198
 Animator:
   serializedVersion: 7
@@ -135,7 +136,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995652170715300391}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: firePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
