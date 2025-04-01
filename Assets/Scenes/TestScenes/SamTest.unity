@@ -590,11 +590,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2074928296600028677, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.9473
+      value: 3.83
       objectReference: {fileID: 0}
     - target: {fileID: 2074928296600028677, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5291
+      value: 2.83
       objectReference: {fileID: 0}
     - target: {fileID: 2074928296600028677, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -634,7 +634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8834227989898042222, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -761,11 +761,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.1209
+      value: 3.61
       objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.0015154
+      value: 0.78
       objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.z
@@ -813,7 +813,7 @@ Transform:
   m_GameObject: {fileID: 4392537450957079657}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.56, y: 0.96, z: -0.05}
+  m_LocalPosition: {x: -1.74, y: 1.8, z: -0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -936,7 +936,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5489045262711594618, guid: 2c4e05859c97c384c923ee22a9a8af3c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.08
+      value: 4.43
       objectReference: {fileID: 0}
     - target: {fileID: 5489045262711594618, guid: 2c4e05859c97c384c923ee22a9a8af3c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1040,6 +1040,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 529385153903017415, guid: fbd28e516f364f346b205d5d69aa6906, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7724661009194853820, guid: fbd28e516f364f346b205d5d69aa6906, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.057
@@ -1095,7 +1099,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 6.73, y: 0, z: -2.21}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3005, y: 1.3005, z: 1.3005}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 146732490537749998}
@@ -1119,7 +1123,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

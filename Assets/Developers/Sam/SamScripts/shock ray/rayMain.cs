@@ -1,6 +1,23 @@
 using UnityEngine;
 
-public class rayMain : shrimpmain
+public class rayMain : enemybase
 {
-    
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] private Transform firePoint;
+
+    protected override void Attack()
+    {
+        Shoot();
+    }
+
+    protected void Shoot()
+    {
+
+        GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+    }
+
+    public override void Movement()
+    {
+        
+    }
 }
