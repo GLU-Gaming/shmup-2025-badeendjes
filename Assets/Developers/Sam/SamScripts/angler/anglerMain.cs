@@ -70,23 +70,23 @@ public class anglerMain : enemybase
         timer -= Time.deltaTime;
     }
 
-    //public override void Update()
-    //{
-    //    switch (currentState)
-    //    {
-    //        case (int)EnemyState.Idle:
-    //            IdleEnemyState();
-    //            break;
-    //        case (int)EnemyState.Agro:
-    //            AgroEnemyState();
-    //            break;
-    //        case (int)EnemyState.Return:
-    //            ReturnEnemyState();
-    //            break;
-    //        default:
-    //            break;
-    //    }
-        
-    //}
+    public override void Update()
+    {
+        switch (currentState)
+        {
+            case (int)EnemyState.Idle:
+                IdleEnemyState();
+                break;
+            case (int)EnemyState.Agro:
+                AgroEnemyState();
+                break;
+            case (int)EnemyState.Return:
+                ReturnEnemyState();
+                break;
+            default:
+                break;
+        }
+
+    }
 
 }

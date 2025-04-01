@@ -15,6 +15,8 @@ public abstract class enemybase : MonoBehaviour
 
     Vector3 pos;
 
+    [SerializeField] tijdelijkWin tijdelijkWin;
+
     public virtual void Start()
     {
         pos = transform.position;
@@ -56,6 +58,7 @@ public abstract class enemybase : MonoBehaviour
     protected virtual void checkIfDead() {
         if (currentHealth <= 0) { 
             Destroy(gameObject);
+            tijdelijkWin.enemyDead();
         
         }
     
