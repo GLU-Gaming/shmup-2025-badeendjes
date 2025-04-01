@@ -222,6 +222,9 @@ MonoBehaviour:
   grounded: 0
   jumpForce: 8
   movingSpeed: 30
+  dashParticle: {fileID: 0}
+  Collider: {fileID: 0}
+  LiveCounter: {fileID: 0}
 --- !u!65 &3613517296151437145
 BoxCollider:
   m_ObjectHideFlags: 0

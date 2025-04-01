@@ -104,7 +104,7 @@ public class Player : MonoBehaviour
             invincibleTimer = 0;
         }
 
-        LiveCounter.text = ("Lives = " + lives).ToString();
+        //LiveCounter.text = ("Lives = " + lives).ToString();
 
          if (lives <= 0) 
          {

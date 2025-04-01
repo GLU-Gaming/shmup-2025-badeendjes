@@ -10,6 +10,8 @@ public class shrimpmain : enemybase
     [SerializeField] float srimpSpeed = 5f;
     //adjust this to change how high it goes
     [SerializeField] float srimpHeight = 3f;
+    [SerializeField] float srimpWaves;
+    [SerializeField] float srimpLength = 3f;
 
     Vector3 srimpPos;
 
@@ -28,11 +30,8 @@ public class shrimpmain : enemybase
     public override void Movement()
     {
         //base.Movement();
-        //custom movement van de shrimp kan hier
-        //calculate what the new Y position will be
-        float newY = Mathf.Sin(Time.time * srimpSpeed) * srimpHeight + srimpPos.y;
-        float newX = -Mathf.Sin(Time.time * srimpSpeed) * srimpHeight + srimpPos.x;
-        //set the object’s Y to the new calculated Y
+        float newY = Mathf.Sin(Time.time * (srimpSpeed*srimpWaves)) * srimpHeight + srimpPos.y;
+        float newX = -Mathf.Sin(Time.time * srimpSpeed) * srimpLength + srimpPos.x;
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
 
