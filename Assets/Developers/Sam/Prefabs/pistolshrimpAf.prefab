@@ -139,6 +139,10 @@ MonoBehaviour:
   tijdelijkWin: {fileID: 0}
   bulletPrefab: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
   firePoint: {fileID: 6778256801153177977}
+  srimpSpeed: 1
+  srimpHeight: 1
+  srimpWaves: 6
+  srimpLength: 7
 --- !u!65 &728521906745760961
 BoxCollider:
   m_ObjectHideFlags: 0
