@@ -31,7 +31,8 @@ public class shrimpmain : enemybase
     {
         //base.Movement();
         float newY = Mathf.Sin(Time.time * (srimpSpeed*srimpWaves)) * srimpHeight + srimpPos.y;
-        float newX = -Mathf.Sin(Time.time * srimpSpeed) * srimpLength + srimpPos.x;
+        //float newX = -Mathf.Sin(Time.time * srimpSpeed) * srimpLength + srimpPos.x;
+        float newX = srimpPos.x - (Mathf.PingPong(Time.time, srimpLength) * srimpSpeed);
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
 
