@@ -14,6 +14,9 @@ public class rayMain : enemybase
 
     Vector3 rayPos;
 
+    
+
+
     public override void Start()
     {
         base.Start();
@@ -34,7 +37,8 @@ public class rayMain : enemybase
     public override void Movement()
     {
         float newY = Mathf.Sin(Time.time * (raySpeed * rayWaves)) * rayHeight + rayPos.y;
-        float newX = -Mathf.Sin(Time.time * raySpeed) * rayLength + rayPos.x;
+        //newX = -Mathf.Sin(Time.time * raySpeed) * rayLength + rayPos.x;
+        float newX = rayPos.x - (Mathf.PingPong(Time.time, rayLength) * raySpeed);
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
 }
