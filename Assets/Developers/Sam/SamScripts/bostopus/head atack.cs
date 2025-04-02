@@ -1,6 +1,4 @@
-using Unity.Mathematics;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class headatack : MonoBehaviour
 {
