@@ -14,13 +14,15 @@ public class rayMain : enemybase
 
     Vector3 rayPos;
 
+    public override void Start()
+    {
+        base.Start();
+        rayPos = transform.position;
+    }
+
     protected override void Attack()
     {
         Shoot();
-        rayPos = transform.position;
-        float newY = Mathf.Sin(Time.time * (raySpeed * rayWaves)) * rayHeight + rayPos.y;
-        float newX = -Mathf.Sin(Time.time * raySpeed) * rayLength + rayPos.x;
-        transform.position = new Vector3(newX, newY, transform.position.z);
     }
 
     protected void Shoot()
@@ -31,6 +33,8 @@ public class rayMain : enemybase
 
     public override void Movement()
     {
-        
+        float newY = Mathf.Sin(Time.time * (raySpeed * rayWaves)) * rayHeight + rayPos.y;
+        float newX = -Mathf.Sin(Time.time * raySpeed) * rayLength + rayPos.x;
+        transform.position = new Vector3(newX, newY, transform.position.z);
     }
 }
