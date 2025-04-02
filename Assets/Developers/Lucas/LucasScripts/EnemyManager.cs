@@ -1,16 +1,28 @@
+
 using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private GameObject ShockRay;
+    [SerializeField] private GameObject Pshrimp;
+    [SerializeField] private GameObject AnglerFish;
+
+    private GameObject[] CurrentEnemies;
+
+
+
+    private void Start()
     {
-        
+        CurrentEnemies = new GameObject[3];
+    }
+    private void Update()
+    {
+
+       foreach (GameObject value in CurrentEnemies) 
+        {
+            Instantiate(value);
+
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
