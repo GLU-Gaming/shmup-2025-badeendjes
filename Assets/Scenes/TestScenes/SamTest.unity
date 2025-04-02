@@ -632,10 +632,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: pistolshrimpAf
       objectReference: {fileID: 0}
-    - target: {fileID: 8834227989898042222, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
