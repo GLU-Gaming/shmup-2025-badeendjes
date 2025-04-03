@@ -21,13 +21,14 @@ public class Player : MonoBehaviour
     [SerializeField] private BoxCollider Collider;
     private float Direction;
 
-    private int lives = 3;
-    [SerializeField] private TextMeshProUGUI LiveCounter;
-    
-    
+    //private int lives = 3;
+    //[SerializeField] private TextMeshProUGUI LiveCounter;
+
+    gameManager gameManager;
 
     void Start()
     {
+        gameManager = GameObject.Find("GameManager").GetComponent<gameManager>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
         rb = GetComponent<Rigidbody>();
     }
@@ -36,7 +37,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("enemybullet") && !isInvincible && !cantBeHit) 
         {
-            lives = lives - 1;
+            gameManager.ReportPlayerHit();
             cantBeHit = true;
             
         }
@@ -106,10 +107,7 @@ public class Player : MonoBehaviour
 
         //LiveCounter.text = ("Lives = " + lives).ToString();
 
-         if (lives <= 0) 
-         {
-            SceneManager.LoadScene("EndScreen");
-         } 
+         
         if (cantBeHit == true) 
         {
             cantBeHitCounter += Time.deltaTime;
