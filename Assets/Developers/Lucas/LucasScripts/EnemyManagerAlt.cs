@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public List<GameObject> objectsToSpawn = new List<GameObject>(); // List of gameObjects to spawn
+    public List<GameObject> objectsToSpawn = new List<GameObject>(); 
     private Vector3 SpawnPoint = new Vector3(10, 2, 0);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
     private bool Move = false;
@@ -15,7 +15,7 @@ public class ObjectSpawner : MonoBehaviour
 
     private IEnumerator SpawnLoop()
     {
-        while (objectsToSpawn.Count > 0) // Loop while objects exist in the list
+        while (objectsToSpawn.Count > 0) 
         {
             GameObject obj = objectsToSpawn[0];
             if (obj != null)
@@ -24,8 +24,8 @@ public class ObjectSpawner : MonoBehaviour
                 obj.transform.position = Vector3.MoveTowards(SpawnPoint, MovePoint, Time.deltaTime);
             }
 
-            objectsToSpawn.RemoveAt(0); // Remove the spawned object from the list
-            yield return null; // Allow next frame update before continuing
+            objectsToSpawn.RemoveAt(0); 
+            yield return null; 
         }
     }
     private void Update()
