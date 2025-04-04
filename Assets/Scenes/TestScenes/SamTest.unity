@@ -315,7 +315,7 @@ Transform:
   m_GameObject: {fileID: 1201361364}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalPosition: {x: 0, y: 2.24, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -563,7 +563,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4567464110100235356, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.79
       objectReference: {fileID: 0}
     - target: {fileID: 4567464110100235356, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
       propertyPath: m_LocalRotation.w
@@ -612,7 +612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2074928296600028677, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.83
+      value: 5.63
       objectReference: {fileID: 0}
     - target: {fileID: 2074928296600028677, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
       propertyPath: m_LocalPosition.z
@@ -681,7 +681,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.78
+      value: 1.45
       objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.z
@@ -851,7 +851,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7325224562730682157, guid: 2c4e05859c97c384c923ee22a9a8af3c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -872,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2825051534610886662, guid: fa52883203cb64143a555516e2af213b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6998853421408569235, guid: fa52883203cb64143a555516e2af213b, type: 3}
       propertyPath: m_LocalPosition.x
