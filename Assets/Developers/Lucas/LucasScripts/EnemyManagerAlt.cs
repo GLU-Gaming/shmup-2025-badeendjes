@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
-    public List<GameObject> objectsToSpawn = new List<GameObject>(); 
+    public List<GameObject> objectsToSpawn = new List<GameObject>();
+    public List<int> EnemyOrder = new List<int>();
     private Vector3 SpawnPoint = new Vector3(10, 2, 0);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
     private bool Move = false;
@@ -22,6 +23,7 @@ public class ObjectSpawner : MonoBehaviour
             {
                 Instantiate(obj, SpawnPoint, Quaternion.identity);
                 obj.transform.position = Vector3.MoveTowards(SpawnPoint, MovePoint, Time.deltaTime);
+                Move = true;
             }
 
             objectsToSpawn.RemoveAt(0); 
@@ -30,6 +32,10 @@ public class ObjectSpawner : MonoBehaviour
     }
     private void Update()
     {
+        if (Move)
+        {
+            
+        }
         
         
     }
