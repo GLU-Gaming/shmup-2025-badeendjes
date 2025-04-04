@@ -19,12 +19,12 @@ public class StartQuitButtons : MonoBehaviour
         Application.Quit();
     }
     
-    public void highscoreON()
+    public void credditsON()
     {
         panel.SetActive(true);
     }
 
-    public void highscoreOFF()
+    public void credditsOFF()
     {
         panel.SetActive(false);
     }
