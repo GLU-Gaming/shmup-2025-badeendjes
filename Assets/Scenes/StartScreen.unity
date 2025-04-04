@@ -522,7 +522,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 3
   m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
+  m_AdditionalLightsShadowResolutionTier: -1
   m_LightLayerMask: 1
   m_RenderingLayers: 1
   m_CustomShadowLayers: 0
@@ -544,17 +544,17 @@ Light:
   m_Color: {r: 0.70754707, g: 1, b: 0.95041907, a: 1}
   m_Intensity: 300000
   m_Range: 899
-  m_SpotAngle: 91.03781
-  m_InnerSpotAngle: 54.75254
+  m_SpotAngle: 134.90341
+  m_InnerSpotAngle: 98.61814
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
+    m_Type: 1
+    m_Resolution: 128
     m_CustomResolution: -1
     m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_Bias: 0.32
+    m_NormalBias: 0
+    m_NearPlane: 0.33
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -581,17 +581,17 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1.9
+  m_BounceIntensity: 140.6
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ForceVisible: 0
-  m_ShadowRadius: 0
+  m_ShadowRadius: 500
   m_ShadowAngle: 0
   m_LightUnit: 1
   m_LuxAtDistance: 1
@@ -604,13 +604,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 529850336}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.70161587, y: -0, z: -0, w: 0.71255535}
-  m_LocalPosition: {x: -46, y: 281.3, z: 188.9}
+  m_LocalRotation: {x: 0.88830453, y: -0, z: -0, w: 0.4592551}
+  m_LocalPosition: {x: -46, y: 264, z: 390}
   m_LocalScale: {x: 0.6870621, y: 0.6787624, z: 0.6870621}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 89.113, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 125.32199, y: 0, z: 0}
 --- !u!1 &546316684
 GameObject:
   m_ObjectHideFlags: 0
@@ -647,7 +647,7 @@ Camera:
   m_GameObject: {fileID: 546316684}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -674,7 +674,7 @@ Camera:
   field of view: 60
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -684,7 +684,7 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
+  m_AllowDynamicResolution: 1
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
@@ -727,11 +727,11 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
-  m_Dithering: 0
+  m_Dithering: 1
   m_ClearDepth: 1
   m_AllowXRRendering: 1
   m_AllowHDROutput: 1
@@ -1301,6 +1301,10 @@ PrefabInstance:
       propertyPath: InitialModule.startRotation.scalar
       value: 0.036651913
       objectReference: {fileID: 0}
+    - target: {fileID: 3585811992282961032, guid: 15713570eda7af54395448361a3f886d, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 0.56078434
+      objectReference: {fileID: 0}
     - target: {fileID: 5202944750366207289, guid: 15713570eda7af54395448361a3f886d, type: 3}
       propertyPath: m_MaxParticleSize
       value: 4.34
@@ -1340,7 +1344,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4284192647427525013, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -85.4
+      value: -140
       objectReference: {fileID: 0}
     - target: {fileID: 4284192647427525013, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1376,19 +1380,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4439051096002463357, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 4.94
+      value: 4.9
       objectReference: {fileID: 0}
     - target: {fileID: 4439051096002463357, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
       propertyPath: InitialModule.startRotation.scalar
       value: 0.04066617
       objectReference: {fileID: 0}
+    - target: {fileID: 4439051096002463357, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439051096002463357, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439051096002463357, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439051096002463357, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8860516456988360879, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
       propertyPath: m_MaxParticleSize
-      value: 3.49
+      value: 4.74
       objectReference: {fileID: 0}
     - target: {fileID: 8860516456988360879, guid: 7df7b9ade3f771c45b52014dd07632e4, type: 3}
       propertyPath: m_MinParticleSize
-      value: 3.49
+      value: 2.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1426,6 +1446,14 @@ PrefabInstance:
     - target: {fileID: 869276702115261096, guid: 99dce2e9858847e4d84c1bc1833ca543, type: 3}
       propertyPath: m_LocalPosition.z
       value: 73.9316
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300286095785846739, guid: 99dce2e9858847e4d84c1bc1833ca543, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1300286095785846739, guid: 99dce2e9858847e4d84c1bc1833ca543, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1523287757635315560, guid: 99dce2e9858847e4d84c1bc1833ca543, type: 3}
       propertyPath: m_LocalPosition.x
