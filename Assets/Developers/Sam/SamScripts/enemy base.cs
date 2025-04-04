@@ -17,10 +17,14 @@ public abstract class enemybase : MonoBehaviour
 
     [SerializeField] tijdelijkWin tijdelijkWin;
 
+    
+    [SerializeField] MonoBehaviour ManagerScript;
+
     public virtual void Start()
     {
         pos = transform.position;
         currentHealth = maxHealth;
+        
     }
 
     public virtual void Update()
@@ -61,7 +65,8 @@ public abstract class enemybase : MonoBehaviour
     }
 
     protected virtual void checkIfDead() {
-        if (currentHealth <= 0) { 
+        if (currentHealth <= 0) {
+           
             Destroy(gameObject);
             tijdelijkWin.enemyDead();
         

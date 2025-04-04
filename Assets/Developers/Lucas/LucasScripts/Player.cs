@@ -42,8 +42,9 @@ public class Player : MonoBehaviour
             
         }
     }
-    void OnCollisionStay()
+    void OnCollisionStay(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Floor"))
         grounded = true;
     }
     private void OnCollisionExit()
