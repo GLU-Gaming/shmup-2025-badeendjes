@@ -1,18 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 
 public class ObjectSpawner : MonoBehaviour
 {
+    [SerializeField] GameObject Shockray;
+    [SerializeField] GameObject Pshrimp;
+    [SerializeField] GameObject Angler;
     public List<GameObject> objectsToSpawn = new List<GameObject>();
-    public List<int> EnemyOrder = new List<int>();
+    //private int[] Enemies = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 1, 1 };
+    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7};
     private Vector3 SpawnPoint = new Vector3(10, 2, 0);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
     private bool Move = false;
-    private void Start()
-    {
-        StartCoroutine(SpawnLoop());
-    }
+    private int currentPhase = 0;
+    public List<GameObject> currentEnemies = new List<GameObject>();
+    
 
     private IEnumerator SpawnLoop()
     {
@@ -21,9 +25,11 @@ public class ObjectSpawner : MonoBehaviour
             GameObject obj = objectsToSpawn[0];
             if (obj != null)
             {
-                Instantiate(obj, SpawnPoint, Quaternion.identity);
-                obj.transform.position = Vector3.MoveTowards(SpawnPoint, MovePoint, Time.deltaTime);
-                Move = true;
+                for (int i = 0; i > SpawnOrder[currentPhase]; i++)
+                {
+                    Instantiate(obj, SpawnPoint, Quaternion.identity);
+                }
+                
             }
 
             objectsToSpawn.RemoveAt(0); 
@@ -32,11 +38,33 @@ public class ObjectSpawner : MonoBehaviour
     }
     private void Update()
     {
-        if (Move)
+        GameObject obj = objectsToSpawn[0];
+        
+      
+            /*for (int i = 0; i < SpawnOrder[0]; i++)
+            {
+                Instantiate(obj, SpawnPoint, Quaternion.identity);
+                objectsToSpawn.RemoveAt(0);
+            }*/
+
+      
+
+ 
+
+    }
+    private void Start()
+    {
+        SpawnNextWave();
+
+
+    }
+    private void SpawnNextWave() 
+    {
+        for (int i = 0; i < SpawnOrder[0]; i++)
         {
-            
+            Instantiate(objectsToSpawn[0], SpawnPoint, Quaternion.identity);
+            currentEnemies.Add(objectsToSpawn[0]);
+            objectsToSpawn.RemoveAt(0);
         }
-        
-        
     }
 }
