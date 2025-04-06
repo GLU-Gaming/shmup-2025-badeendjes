@@ -569,6 +569,7 @@ GameObject:
   - component: {fileID: 1194327138}
   - component: {fileID: 1194327137}
   - component: {fileID: 1194327136}
+  - component: {fileID: 1194327139}
   m_Layer: 0
   m_Name: Spot Light (1)
   m_TagString: Untagged
@@ -673,12 +674,29 @@ Transform:
   m_GameObject: {fileID: 1194327135}
   serializedVersion: 2
   m_LocalRotation: {x: 0.50992596, y: -0, z: -0, w: 0.86021835}
-  m_LocalPosition: {x: -36.2, y: -4.6, z: 110.8}
+  m_LocalPosition: {x: -36.2, y: -4.6, z: 100.4}
   m_LocalScale: {x: 2043.033, y: 2043.033, z: 2043.033}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 61.318, y: 0, z: 0}
+--- !u!114 &1194327139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194327135}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d3ca9f8b35bd2942bfd8b3a928552fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lightOB: {fileID: 1194327137}
+  lightSound: {fileID: 0}
+  minTime: 0
+  maxTime: 0
+  timer: 0
 --- !u!1 &1798106037
 GameObject:
   m_ObjectHideFlags: 0
@@ -730,6 +748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175ef52dc68c0594c97cf6bbc35904ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
 --- !u!114 &1798106040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -875,6 +894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 175ef52dc68c0594c97cf6bbc35904ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panel: {fileID: 0}
 --- !u!114 &1900778466
 MonoBehaviour:
   m_ObjectHideFlags: 0
