@@ -51,6 +51,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (SpawnOrder[Order] > currentEnemies.Count)
         {
+            SpawnPoint.y = Random.Range(2f, 8f);
            GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
             currentEnemies.Add(go);
             Object++;
