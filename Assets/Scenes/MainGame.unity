@@ -237,6 +237,7 @@ MonoBehaviour:
   - {fileID: 1256671520440192323, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
   currentEnemies: []
   refScript: {fileID: 0}
+  Object: 0
 --- !u!1 &71833333
 GameObject:
   m_ObjectHideFlags: 0
