@@ -81,8 +81,9 @@ MonoBehaviour:
   speed: 5
   height: 1
   fireRate: 2
-  maxHealth: 10
+  maxHealth: 4
   tijdelijkWin: {fileID: 0}
+  ManagerScript: {fileID: 0}
   bulletPrefab: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
   firePoint: {fileID: 6778256801153177977}
   srimpSpeed: 1

@@ -68,7 +68,7 @@ public abstract class enemybase : MonoBehaviour
         if (currentHealth <= 0) {
            
             Destroy(gameObject);
-            tijdelijkWin.enemyDead();
+            //tijdelijkWin.enemyDead();
         
         }
     

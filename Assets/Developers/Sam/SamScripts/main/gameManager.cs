@@ -38,10 +38,10 @@ public class gameManager : MonoBehaviour
         }
 
 
-        if (lives <= 0)
+        /* if (lives <= 0)
         {
             SceneManager.LoadScene("EndScreen");
-        }
+         } */
 
     }
 }
