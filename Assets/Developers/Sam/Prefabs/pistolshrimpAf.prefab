@@ -84,6 +84,7 @@ MonoBehaviour:
   maxHealth: 10
   particle: {fileID: 7539490239567763107, guid: 80662dd62e0e24542a4767d83f1b2064, type: 3}
   tijdelijkWin: {fileID: 0}
+  ManagerScript: {fileID: 0}
   bulletPrefab: {fileID: 5958178346311225377, guid: 74555e8503b4bc64f904ef457ccea392, type: 3}
   firePoint: {fileID: 6778256801153177977}
   srimpSpeed: 1
