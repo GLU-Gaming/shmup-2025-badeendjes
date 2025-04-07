@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public abstract class enemybase : MonoBehaviour
 {
@@ -14,11 +15,10 @@ public abstract class enemybase : MonoBehaviour
     private float currentHealth;
 
     Vector3 pos;
+    [SerializeField] GameObject particle;
 
     [SerializeField] tijdelijkWin tijdelijkWin;
 
-    
-    [SerializeField] MonoBehaviour ManagerScript;
 
     public virtual void Start()
     {
@@ -58,6 +58,7 @@ public abstract class enemybase : MonoBehaviour
 
         if (collision.gameObject.tag == "bullets") {
 
+            Instantiate(particle, transform.position, transform.rotation);
             currentHealth = currentHealth - 1;
             checkIfDead();
         }
