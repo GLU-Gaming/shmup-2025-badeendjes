@@ -21,8 +21,8 @@ public class Player : MonoBehaviour
     [SerializeField] private BoxCollider Collider;
     private float Direction;
 
-    //private int lives = 3;
-    //[SerializeField] private TextMeshProUGUI LiveCounter;
+    private bool shrimpWeaponActive = true;
+    
 
     gameManager gameManager;
 
@@ -54,13 +54,20 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (Input.GetKey(KeyCode.Q) && shrimpWeaponActive) 
+        {
+            shrimpWeaponActive = false;
+        }
+        if (Input.GetKey(KeyCode.Q) && !shrimpWeaponActive)
+        {
+            shrimpWeaponActive = true;
+        }
         rb.AddForce(Input.GetAxisRaw("Horizontal") * movingSpeed, 0f, 0f);
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             grounded = false;
             
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            
         }
     }
     private void Update()

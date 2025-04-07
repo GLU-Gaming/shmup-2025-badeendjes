@@ -15,7 +15,11 @@ public class gameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("StartScreen");
+
+        }
     }
 
     public void ReportPlayerHit()
@@ -38,10 +42,10 @@ public class gameManager : MonoBehaviour
         }
 
 
-        /* if (lives <= 0)
+        if (lives <= 0)
         {
-            SceneManager.LoadScene("EndScreen");
-         } */
+           SceneManager.LoadScene("EndScreen");
+        } 
 
     }
 }
