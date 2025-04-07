@@ -929,43 +929,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Developers
-
-    ____________________
-
-    Sam
-
-    Lucas
-
-    ____________________
-
-    Artist
-
-    ____________________
-
-    Alyssa
-
-    Andrea
-
-    Damon
-
-    Merel
-
-    Moise
-
-    ___________________
-
-    Soundeffects
-
-    ___________________
-
-    By:8doxo
-    ,Via:Pixbay
-
-
-
-
-'
+  m_text: "Developers\n____________________\nSam\nLucas\n____________________\nArtist\n____________________\nAlyssa\nAndrea\nDamon\nMerel\nMoise\n___________________\nSoundeffects\n___________________\n\nPlaterShrimpAttack
+    By 8doxo Via Pixabay\n\nPlayerSwordAttack, EnemyHit,  PlayerHit, AnglerFishAttack
+    and BossShoot By freesound_community via Pixabay\n\nDash By RescopicSound via
+    Pixabay\n\nJump By SoundReality via Pixabay\n\nStingrayAttack By VoiceBosch via
+    Pixabay\n\nPistolShrimpAttack By Trading_Nation via Pixabay\n \nBossSlam By BryanSantosBreton
+    via Pixabay\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8ceec53d3f5a74742ae91e531b6c9686, type: 2}
   m_sharedMaterial: {fileID: -8782071086702150066, guid: 8ceec53d3f5a74742ae91e531b6c9686, type: 2}
@@ -1206,7 +1175,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &822374666
 RectTransform:
   m_ObjectHideFlags: 0
