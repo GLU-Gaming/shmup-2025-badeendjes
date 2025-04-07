@@ -72,6 +72,7 @@ MonoBehaviour:
   height: 1
   fireRate: 0
   maxHealth: 5
+  particle: {fileID: 7539490239567763107, guid: 80662dd62e0e24542a4767d83f1b2064, type: 3}
   tijdelijkWin: {fileID: 0}
   resetTime: 3
   anglerSpeed: 5

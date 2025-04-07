@@ -1,4 +1,5 @@
 using UnityEngine;
+using static UnityEngine.ParticleSystem;
 
 public abstract class enemybase : MonoBehaviour
 {
@@ -14,11 +15,10 @@ public abstract class enemybase : MonoBehaviour
     private float currentHealth;
 
     Vector3 pos;
+    [SerializeField] GameObject particle;
 
     [SerializeField] tijdelijkWin tijdelijkWin;
 
-    
-    [SerializeField] MonoBehaviour ManagerScript;
 
     public virtual void Start()
     {
@@ -44,7 +44,7 @@ public abstract class enemybase : MonoBehaviour
     public virtual void Movement()
     {
         //calculate what the new Y position will be
-        float newY = Mathf.Sin(Time.time * speed) * height + pos.y;
+        float newY = (Mathf.Sin(Time.time * speed) * height) + pos.y;
         //set the object’s Y to the new calculated Y
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
@@ -58,6 +58,7 @@ public abstract class enemybase : MonoBehaviour
 
         if (collision.gameObject.tag == "bullets") {
 
+            Instantiate(particle, transform.position, transform.rotation);
             currentHealth = currentHealth - 1;
             checkIfDead();
         }
@@ -68,7 +69,7 @@ public abstract class enemybase : MonoBehaviour
         if (currentHealth <= 0) {
            
             Destroy(gameObject);
-            tijdelijkWin.enemyDead();
+            //tijdelijkWin.enemyDead();
         
         }
     
