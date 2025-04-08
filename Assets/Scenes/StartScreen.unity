@@ -339,7 +339,6 @@ RectTransform:
   - {fileID: 1406352120}
   - {fileID: 1963604805}
   - {fileID: 1753998994}
-  - {fileID: 822374666}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1183,19 +1182,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 822374665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8414373077051825105}
   - {fileID: 760890747}
   - {fileID: 6676438700813741464}
-  m_Father: {fileID: 313570795}
+  m_Father: {fileID: 1753998994}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 52.8311, y: 31.31}
+  m_AnchoredPosition: {x: -19.100067, y: -10.447496}
   m_SizeDelta: {x: 429.6234, y: 356.05}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &891929874
@@ -1683,7 +1682,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 343452500}
         m_TargetAssemblyTypeName: StartQuitButtons, Assembly-CSharp
-        m_MethodName: startGame
+        m_MethodName: exitApplication
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1778,7 +1777,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 1
-  m_Children: []
+  m_Children:
+  - {fileID: 822374666}
   m_Father: {fileID: 313570795}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
