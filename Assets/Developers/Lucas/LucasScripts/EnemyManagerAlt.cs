@@ -12,7 +12,7 @@ public class ObjectSpawner : MonoBehaviour
     public List<GameObject> objectsToSpawn = new List<GameObject>();
     //private int[] Enemies = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 1, 1 };
     private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 1/*4, 1, 4, 6, 7, 1*/};
-    private int Order = 0;
+    private int Order = -1;
     private Vector3 SpawnPoint = new Vector3(10, 0, -2);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
     private bool Move = false;
@@ -90,7 +90,7 @@ public class ObjectSpawner : MonoBehaviour
             controlsTimer += Time.deltaTime;
         }
 
-        if (controlsTimer >= 3f) 
+        if (controlsTimer >= 4f) 
         {
             Controls.SetActive(false);
             StartCoroutine(SpawnNextWave());
@@ -111,7 +111,7 @@ public class ObjectSpawner : MonoBehaviour
             }
         }
 
-        if (currentEnemies.Count <= 0) 
+        if (currentEnemies.Count <= 0 && controlsTimer >= 4f) 
         {
             Order = Order + 1;
             StartCoroutine(SpawnNextWave());
