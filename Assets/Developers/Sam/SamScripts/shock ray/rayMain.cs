@@ -14,6 +14,8 @@ public class rayMain : enemybase
 
     Vector3 rayPos;
 
+    public AudioSource stingrayAttack;
+    public AudioSource enemyHit;
 
     public float yOffset;
 
@@ -25,12 +27,13 @@ public class rayMain : enemybase
 
     protected override void Attack()
     {
+
         Shoot();
     }
 
     protected void Shoot()
     {
-
+        stingrayAttack.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
@@ -40,5 +43,11 @@ public class rayMain : enemybase
         //newX = -Mathf.Sin(Time.time * raySpeed) * rayLength + rayPos.x;
         float newX = rayPos.x - (Mathf.PingPong(Time.time, rayLength) * raySpeed);
         transform.position = new Vector3(newX, newY, transform.position.z);
+    }
+
+    public override void damageSound()
+    {
+        enemyHit.Play();
+        base.damageSound();
     }
 }

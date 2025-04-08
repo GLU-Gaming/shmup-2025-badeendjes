@@ -7,11 +7,13 @@ public class headatack : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firePoint;
 
+    public AudioSource bossShoot;
+
     private void Update()
     {
         if (Time.time >= nextFireTime)
         {
-
+            bossShoot.Play();
             Attack();
             nextFireTime = Time.time + fireRate;
 
