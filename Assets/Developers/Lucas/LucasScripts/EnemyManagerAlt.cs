@@ -7,18 +7,19 @@ using UnityEngine;
 public class ObjectSpawner : MonoBehaviour
 {
     [SerializeField] GameObject Enemy;
-   
+    public GameObject Bocto;
     public List<GameObject> objectsToSpawn = new List<GameObject>();
     //private int[] Enemies = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 1, 1 };
-    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7};
+    private int[] SpawnOrder = new int[] {1, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7, 1};
     private int Order = 0;
-    private Vector3 SpawnPoint = new Vector3(10, 2, -2);
+    private Vector3 SpawnPoint = new Vector3(10, 0, -2);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
     private bool Move = false;
     private int currentPhase = 0;
     public List<GameObject> currentEnemies = new List<GameObject>();
     public MonoBehaviour refScript;
     public int Object = 0;
+    public AudioSource bossFightMusic;
     
 
    /* private IEnumerator SpawnLoop()
@@ -51,10 +52,22 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (SpawnOrder[Order] > currentEnemies.Count)
         {
-            SpawnPoint.y = Random.Range(2f, 8f);
-           GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
-            currentEnemies.Add(go);
-            Object++;
+            SpawnPoint.y = Random.Range(-1f, 8f);
+            if (objectsToSpawn[Object] != Bocto)
+            {
+                GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
+                currentEnemies.Add(go);
+            }
+            if (objectsToSpawn[Object] == Bocto) 
+            {
+                bossFightMusic.Play();
+                SpawnPoint.y = 0f;
+                GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
+                currentEnemies.Add(go);
+
+            }
+
+                Object++;
 
             yield return new WaitForSeconds(1);
             
