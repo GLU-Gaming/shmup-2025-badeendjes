@@ -8,7 +8,7 @@ public class PlayerShooting : MonoBehaviour
     [SerializeField] private float Cooldown = 1f;
     private float cooldownCounter;
     private bool isShooting;
-    private bool shrimpWeaponActive;
+    private bool shrimpWeaponActive = true;
     private GameObject currentWeapon;
     public AudioSource shrimpShoot;
     public AudioSource swordShoot;
