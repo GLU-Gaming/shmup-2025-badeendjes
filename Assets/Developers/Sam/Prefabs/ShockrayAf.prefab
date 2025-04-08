@@ -106,7 +106,7 @@ MonoBehaviour:
   speed: 5
   height: 1
   fireRate: 2
-  maxHealth: 15
+  maxHealth: 3
   particle: {fileID: 7539490239567763107, guid: 80662dd62e0e24542a4767d83f1b2064, type: 3}
   tijdelijkWin: {fileID: 0}
   bulletPrefab: {fileID: 9126164845390546553, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}

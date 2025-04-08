@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 575556259067473230}
   m_Layer: 10
   m_Name: SwordFeesh
-  m_TagString: SwordBullet
+  m_TagString: SwordBullets
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

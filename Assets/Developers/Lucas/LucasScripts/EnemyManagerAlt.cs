@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using NUnit.Framework.Constraints;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ObjectSpawner : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject Bocto;
     public List<GameObject> objectsToSpawn = new List<GameObject>();
     //private int[] Enemies = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 1, 1 };
-    private int[] SpawnOrder = new int[] {1, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7, 1};
+    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7, 1};
     private int Order = 0;
     private Vector3 SpawnPoint = new Vector3(10, 0, -2);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
@@ -20,6 +21,7 @@ public class ObjectSpawner : MonoBehaviour
     public MonoBehaviour refScript;
     public int Object = 0;
     public AudioSource bossFightMusic;
+    public AudioSource fightMusic;
     
 
    /* private IEnumerator SpawnLoop()
@@ -52,7 +54,7 @@ public class ObjectSpawner : MonoBehaviour
     {
         while (SpawnOrder[Order] > currentEnemies.Count)
         {
-            SpawnPoint.y = Random.Range(-1f, 8f);
+            SpawnPoint.y = Random.Range(1f, 8f);
             if (objectsToSpawn[Object] != Bocto)
             {
                 GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
@@ -60,6 +62,7 @@ public class ObjectSpawner : MonoBehaviour
             }
             if (objectsToSpawn[Object] == Bocto) 
             {
+                fightMusic.Stop();
                 bossFightMusic.Play();
                 SpawnPoint.y = 0f;
                 GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
@@ -76,7 +79,10 @@ public class ObjectSpawner : MonoBehaviour
     }
     private void Update()
     {
-        
+        if (objectsToSpawn == null) 
+        {
+            SceneManager.LoadScene("YouWinScreen");
+        }
         for (int i = 0; i < currentEnemies.Count; i++)
         {
            
