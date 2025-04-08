@@ -14,6 +14,8 @@ public class shrimpmain : enemybase
 
     Vector3 srimpPos;
 
+    public AudioSource pistolShrimpAttack;
+
     public override void Start()
     {
         base.Start();
@@ -37,7 +39,7 @@ public class shrimpmain : enemybase
 
     protected void Shoot()
     {
-        
+        pistolShrimpAttack.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 

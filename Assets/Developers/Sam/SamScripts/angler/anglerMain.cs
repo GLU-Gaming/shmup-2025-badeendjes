@@ -10,6 +10,8 @@ public class anglerMain : enemybase
 
     Vector3 idlePosition;
 
+    public AudioSource stingrayAttack;
+
     private enum EnemyState {
         Idle,
         Agro,
@@ -66,6 +68,7 @@ public class anglerMain : enemybase
             timer = resetTime;
             return;
         }
+        stingrayAttack.Play();
         transform.position += new Vector3((int) Direction.Left * anglerSpeed * Time.deltaTime, 0, 0);
         timer -= Time.deltaTime;
     }
