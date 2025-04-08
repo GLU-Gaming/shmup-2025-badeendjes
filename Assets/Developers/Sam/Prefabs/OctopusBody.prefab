@@ -125,7 +125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 20
-  particle: {fileID: 0}
+  particle: {fileID: 7539490239567763107, guid: 80662dd62e0e24542a4767d83f1b2064, type: 3}
   enemyHit: {fileID: -9158274813397302906}
 --- !u!82 &-9158274813397302906
 AudioSource:
