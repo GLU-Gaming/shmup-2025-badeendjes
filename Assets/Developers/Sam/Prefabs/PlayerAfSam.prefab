@@ -175,7 +175,6 @@ MonoBehaviour:
   movingSpeed: 30
   dashParticle: {fileID: 6709651236221553105}
   Collider: {fileID: 2557542968869513056}
-  LiveCounter: {fileID: 0}
 --- !u!65 &2557542968869513056
 BoxCollider:
   m_ObjectHideFlags: 0

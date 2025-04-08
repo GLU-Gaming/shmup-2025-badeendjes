@@ -3,13 +3,20 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    [SerializeField] private GameObject Bullet;
+    [SerializeField] private GameObject Shrimp;
+    [SerializeField] private GameObject SwordFish;
     [SerializeField] private float Cooldown = 1f;
     private float cooldownCounter;
     private bool isShooting;
+    private bool shrimpWeaponActive;
+    private GameObject currentWeapon;
+    public AudioSource shrimpShoot;
+    public AudioSource swordShoot;
 
-
-
+    private void Start()
+    {
+        currentWeapon = Shrimp; 
+    }
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -17,9 +24,28 @@ public class PlayerShooting : MonoBehaviour
             if (cooldownCounter >= Cooldown)
             {
                 Debug.Log("POW");
-                Instantiate(Bullet, transform.position, transform.rotation);
+                Instantiate(currentWeapon, transform.position, transform.rotation);
                 cooldownCounter = 0;
+                if (shrimpWeaponActive) 
+                {
+                    shrimpShoot.Play();
+                }
+                else if (!shrimpWeaponActive) 
+                {
+                    swordShoot.Play();
+                }
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && shrimpWeaponActive)
+        {
+            shrimpWeaponActive = false;
+            currentWeapon = SwordFish;
+        }
+        else if (Input.GetKeyDown(KeyCode.Q) && !shrimpWeaponActive)
+        {
+            shrimpWeaponActive = true;
+            currentWeapon = Shrimp;
         }
         cooldownCounter += Time.deltaTime;
 
@@ -30,7 +56,7 @@ public class PlayerShooting : MonoBehaviour
 
         if (Input.GetMouseButtonUp(0))
             isShooting = false;
-    }
+   
 
     private IEnumerator Shoot()
     {

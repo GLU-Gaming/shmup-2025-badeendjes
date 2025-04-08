@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
     private bool cantBeHit = false;
     private float cantBeHitCounter;
-
+   
     private bool isInvincible;
     private float invincibleTimer;
     private float dashCooldownCounter;
@@ -21,8 +21,6 @@ public class Player : MonoBehaviour
     [SerializeField] private BoxCollider Collider;
     private float Direction;
 
-    private bool shrimpWeaponActive = true;
-    
 
     gameManager gameManager;
 
@@ -54,14 +52,7 @@ public class Player : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Q) && shrimpWeaponActive) 
-        {
-            shrimpWeaponActive = false;
-        }
-        if (Input.GetKey(KeyCode.Q) && !shrimpWeaponActive)
-        {
-            shrimpWeaponActive = true;
-        }
+       
         rb.AddForce(Input.GetAxisRaw("Horizontal") * movingSpeed, 0f, 0f);
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
