@@ -11,7 +11,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject Bocto;
     public List<GameObject> objectsToSpawn = new List<GameObject>();
     //private int[] Enemies = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 1, 1 };
-    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7, 1};
+    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 1/*4, 1, 4, 6, 7, 1*/};
     private int Order = 0;
     private Vector3 SpawnPoint = new Vector3(10, 0, -2);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
@@ -22,7 +22,10 @@ public class ObjectSpawner : MonoBehaviour
     public int Object = 0;
     public AudioSource bossFightMusic;
     public AudioSource fightMusic;
-    
+    [SerializeField] private GameObject Controls;
+    private float controlsTimer;
+    private bool controlCheck;
+
 
    /* private IEnumerator SpawnLoop()
     {
@@ -43,10 +46,12 @@ public class ObjectSpawner : MonoBehaviour
             yield return null; 
         } 
     } */
-    
+
     private void Start()
     {
-        StartCoroutine(SpawnNextWave());
+        
+        Controls.SetActive(true);
+        controlCheck = true;
 
 
     }
@@ -79,6 +84,17 @@ public class ObjectSpawner : MonoBehaviour
     }
     private void Update()
     {
+
+        if (controlCheck) 
+        {
+            controlsTimer += Time.deltaTime;
+        }
+
+        if (controlsTimer >= 3f) 
+        {
+            Controls.SetActive(false);
+            StartCoroutine(SpawnNextWave());
+        }
         if (objectsToSpawn == null) 
         {
             SceneManager.LoadScene("YouWinScreen");

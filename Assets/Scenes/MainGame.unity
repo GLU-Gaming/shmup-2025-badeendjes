@@ -245,6 +245,7 @@ MonoBehaviour:
   Object: 0
   bossFightMusic: {fileID: 4932997}
   fightMusic: {fileID: 4932998}
+  Controls: {fileID: 1685800226}
 --- !u!82 &4932997
 AudioSource:
   m_ObjectHideFlags: 0
