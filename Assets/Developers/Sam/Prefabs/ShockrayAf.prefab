@@ -115,6 +115,8 @@ MonoBehaviour:
   rayHeight: 1
   rayWaves: 4
   rayLength: 8
+  stingrayAttack: {fileID: -5874305215745569742}
+  enemyHit: {fileID: 6953960344017642439}
   yOffset: 0
 --- !u!82 &-5874305215745569742
 AudioSource:

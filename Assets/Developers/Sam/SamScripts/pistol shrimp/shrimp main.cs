@@ -15,6 +15,7 @@ public class shrimpmain : enemybase
     Vector3 srimpPos;
 
     public AudioSource pistolShrimpAttack;
+    public AudioSource enemyHit;
 
     public override void Start()
     {
@@ -44,6 +45,7 @@ public class shrimpmain : enemybase
     }
     public override void damageSound()
     {
+        enemyHit.Play();
         base.damageSound();
     }
 }

@@ -79,6 +79,8 @@ MonoBehaviour:
   resetTime: 3
   anglerSpeed: 5
   timer: 3
+  stingrayAttack: {fileID: -3100097040588983482}
+  enemyHit: {fileID: -2156206462955946664}
 --- !u!65 &5039511246150353834
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class anglerMain : enemybase
     Vector3 idlePosition;
 
     public AudioSource stingrayAttack;
+    public AudioSource enemyHit;
 
     private enum EnemyState {
         Idle,
@@ -93,6 +94,7 @@ public class anglerMain : enemybase
     }
     public override void damageSound()
     {
+        enemyHit.Play();
         base.damageSound();
     }
 }
