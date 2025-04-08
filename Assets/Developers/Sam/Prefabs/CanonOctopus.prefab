@@ -158,6 +158,7 @@ MonoBehaviour:
   fireRate: 0.5
   bulletPrefab: {fileID: 529385153903017415, guid: fbd28e516f364f346b205d5d69aa6906, type: 3}
   firePoint: {fileID: 8702979786763200795}
+  bossShoot: {fileID: -6003687769353784283}
 --- !u!82 &-6003687769353784283
 AudioSource:
   m_ObjectHideFlags: 0

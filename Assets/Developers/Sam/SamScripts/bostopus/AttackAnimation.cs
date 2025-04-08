@@ -7,6 +7,8 @@ public class AttackAnimation : MonoBehaviour
     Animator m_Animator;
     bool isAttacking = false;
 
+    public AudioSource bossSlam;
+
     private enum atackState { 
         stab,
         smack
@@ -25,6 +27,7 @@ public class AttackAnimation : MonoBehaviour
        
         yield return new WaitForSeconds(delay);
         int rng = Random.Range(0, 2);
+        bossSlam.Play();
         if (rng == (int)atackState.stab)
         {
             m_Animator.SetTrigger("stab");

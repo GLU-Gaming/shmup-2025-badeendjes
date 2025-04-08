@@ -93,6 +93,7 @@ MonoBehaviour:
   srimpWaves: 6
   srimpLength: 7
   pistolShrimpAttack: {fileID: 5806061460111434091}
+  enemyHit: {fileID: -3781630333352459153}
 --- !u!65 &728521906745760961
 BoxCollider:
   m_ObjectHideFlags: 0

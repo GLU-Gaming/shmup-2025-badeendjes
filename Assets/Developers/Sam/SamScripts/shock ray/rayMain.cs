@@ -14,6 +14,8 @@ public class rayMain : enemybase
 
     Vector3 rayPos;
 
+    public AudioSource stingrayAttack;
+    public AudioSource enemyHit;
 
     public float yOffset;
 
@@ -25,12 +27,13 @@ public class rayMain : enemybase
 
     protected override void Attack()
     {
+
         Shoot();
     }
 
     protected void Shoot()
     {
-
+        stingrayAttack.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 
@@ -44,6 +47,7 @@ public class rayMain : enemybase
 
     public override void damageSound()
     {
+        enemyHit.Play();
         base.damageSound();
     }
 }
