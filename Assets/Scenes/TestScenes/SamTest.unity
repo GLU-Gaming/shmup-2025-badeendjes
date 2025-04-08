@@ -522,6 +522,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   lives: 5
+  timePoints: {fileID: 0}
 --- !u!4 &1414064380
 Transform:
   m_ObjectHideFlags: 0
@@ -551,7 +552,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 517237494308523727, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4567464110100235356, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
       propertyPath: m_LocalPosition.x
@@ -654,6 +655,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: pistolshrimpAf
       objectReference: {fileID: 0}
+    - target: {fileID: 8834227989898042222, guid: d413877ebac7e174cac4cc5304f083a0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -670,6 +675,10 @@ PrefabInstance:
     - target: {fileID: 1256671520440192323, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_Name
       value: Shockray
+      objectReference: {fileID: 0}
+    - target: {fileID: 1256671520440192323, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5202281710535119357, guid: 1161d5bdec00b4746aa2326acca86054, type: 3}
       propertyPath: m_LocalPosition.x
@@ -844,6 +853,10 @@ PrefabInstance:
     - target: {fileID: 7325224562730682157, guid: 2c4e05859c97c384c923ee22a9a8af3c, type: 3}
       propertyPath: m_Name
       value: anglerfish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325224562730682157, guid: 2c4e05859c97c384c923ee22a9a8af3c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
