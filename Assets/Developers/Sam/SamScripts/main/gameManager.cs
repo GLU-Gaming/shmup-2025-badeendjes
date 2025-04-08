@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,6 +7,8 @@ public class gameManager : MonoBehaviour
     [SerializeField] GameObject[] harts;
     public int lives = 5;
 
+    [SerializeField] private TextMeshProUGUI timePoints;
+    private float timeNum;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,6 +23,14 @@ public class gameManager : MonoBehaviour
             SceneManager.LoadScene("StartScreen");
 
         }
+
+        timeNum = Mathf.Floor(Time.time);
+        //timeNum = Time.time;
+        string output = "" + timeNum;
+
+        output = output.PadLeft(5, '0');
+
+        timePoints.text = output;
     }
 
     public void ReportPlayerHit()

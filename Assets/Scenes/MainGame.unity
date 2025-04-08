@@ -156,6 +156,7 @@ MonoBehaviour:
   - {fileID: 529353558}
   - {fileID: 101378883}
   lives: 5
+  timePoints: {fileID: 804310857}
 --- !u!4 &4932995
 Transform:
   m_ObjectHideFlags: 0
@@ -1209,7 +1210,7 @@ GameObject:
   - component: {fileID: 804310858}
   - component: {fileID: 804310857}
   m_Layer: 5
-  m_Name: Text (TMP) (1)
+  m_Name: scoreTijd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1223,7 +1224,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 804310855}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1.4}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1231,8 +1232,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 322.87415, y: -191.56554}
-  m_SizeDelta: {x: 45.8486, y: 8.9368}
+  m_AnchoredPosition: {x: 326.90314, y: -194.3}
+  m_SizeDelta: {x: 28.7385, y: 8.9368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &804310857
 MonoBehaviour:
@@ -1254,7 +1255,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1000
+  m_text: 000000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1281,8 +1282,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 9
-  m_fontSizeBase: 9
+  m_fontSize: 8.12
+  m_fontSizeBase: 8.12
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2923,10 +2924,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 804310856}
   - {fileID: 1921004705}
   - {fileID: 1170853387}
   - {fileID: 2137940579}
+  - {fileID: 804310856}
   - {fileID: 701729219}
   - {fileID: 1012708536}
   - {fileID: 81041217}
