@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField] private BoxCollider Collider;
     private float Direction;
 
+    public AudioSource DashSound;
+    public AudioSource JumpSound;
+
 
     gameManager gameManager;
 
@@ -57,7 +60,7 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && grounded)
         {
             grounded = false;
-            
+            JumpSound.Play();
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
         }
     }
@@ -70,6 +73,7 @@ public class Player : MonoBehaviour
        {
             isInvincible = true;
             dashCooldownCounter = 0;
+            DashSound.Play();
        }
        
 

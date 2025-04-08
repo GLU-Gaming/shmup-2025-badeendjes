@@ -192,6 +192,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerAfSam
       objectReference: {fileID: 0}
+    - target: {fileID: 1794180937925009242, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
+      propertyPath: Shrimp
+      value: 
+      objectReference: {fileID: 7002977419864245849, guid: a97b9169e2f152b418b20e3bb295e962, type: 3}
+    - target: {fileID: 1794180937925009242, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
+      propertyPath: SwordFish
+      value: 
+      objectReference: {fileID: 7002977419864245849, guid: a61aa4ff95faea54e92d0474d2856463, type: 3}
     - target: {fileID: 4567464110100235356, guid: f7489cc0a049c674e9e9a1e7ee092796, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.72
