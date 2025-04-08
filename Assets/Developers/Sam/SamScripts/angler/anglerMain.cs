@@ -91,5 +91,8 @@ public class anglerMain : enemybase
         }
 
     }
-
+    public override void damageSound()
+    {
+        base.damageSound();
+    }
 }

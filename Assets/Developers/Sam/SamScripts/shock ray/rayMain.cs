@@ -41,4 +41,9 @@ public class rayMain : enemybase
         float newX = rayPos.x - (Mathf.PingPong(Time.time, rayLength) * raySpeed);
         transform.position = new Vector3(newX, newY, transform.position.z);
     }
+
+    public override void damageSound()
+    {
+        base.damageSound();
+    }
 }

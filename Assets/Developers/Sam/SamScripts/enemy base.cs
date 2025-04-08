@@ -24,7 +24,7 @@ public abstract class enemybase : MonoBehaviour
     {
         pos = transform.position;
         currentHealth = maxHealth;
-        
+
     }
 
     public virtual void Update()
@@ -61,6 +61,7 @@ public abstract class enemybase : MonoBehaviour
             Instantiate(particle, transform.position, transform.rotation);
             currentHealth = currentHealth - 1;
             checkIfDead();
+            damageSound();
         }
 
         if (collision.gameObject.tag == "SwordBullets")
@@ -69,8 +70,13 @@ public abstract class enemybase : MonoBehaviour
             Instantiate(particle, transform.position, transform.rotation);
             currentHealth = currentHealth - 5;
             checkIfDead();
+            damageSound();
         }
 
+    }
+
+    public virtual void damageSound (){
+    
     }
 
     protected virtual void checkIfDead() {

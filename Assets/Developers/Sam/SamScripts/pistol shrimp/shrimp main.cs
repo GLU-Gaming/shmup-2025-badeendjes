@@ -42,5 +42,8 @@ public class shrimpmain : enemybase
         pistolShrimpAttack.Play();
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
-
+    public override void damageSound()
+    {
+        base.damageSound();
+    }
 }
