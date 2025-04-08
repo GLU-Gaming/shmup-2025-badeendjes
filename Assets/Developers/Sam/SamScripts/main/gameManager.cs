@@ -12,7 +12,7 @@ public class gameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        PlayerPrefs.SetFloat("timeScore", 0);
     }
 
     // Update is called once per frame
@@ -25,7 +25,9 @@ public class gameManager : MonoBehaviour
         }
 
         timeNum = Mathf.Floor(Time.time);
-        //timeNum = Time.time;
+
+        PlayerPrefs.SetFloat("timeScore", timeNum);
+
         string output = "" + timeNum;
 
         output = output.PadLeft(5, '0');
