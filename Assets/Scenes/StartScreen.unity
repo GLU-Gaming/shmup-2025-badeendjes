@@ -884,8 +884,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -216.89233, y: -739.0891}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -191, y: 1516}
+  m_SizeDelta: {x: 140, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &734933717
 Animator:
@@ -929,7 +929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Developers\n____________________\nSam\nLucas\n____________________\nArtist\n____________________\nAlyssa\nAndrea\nDamon\nMerel\nMoise\n___________________\nSoundeffects\n___________________\n\nPlaterShrimpAttack
+  m_text: "Developers\n________________\nSam\nLucas\n________________\nArtist\n________________\nAlyssa\nAndrea\nDamon\nMerel\nMoise\n_______________\nSoundeffects\n_______________\n\nPlaterShrimpAttack
     By 8doxo Via Pixabay\n\nPlayerSwordAttack, EnemyHit,  PlayerHit, AnglerFishAttack
     and BossShoot By freesound_community via Pixabay\n\nDash By RescopicSound via
     Pixabay\n\nJump By SoundReality via Pixabay\n\nStingrayAttack By VoiceBosch via
@@ -961,8 +961,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
