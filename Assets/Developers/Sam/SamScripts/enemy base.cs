@@ -62,7 +62,15 @@ public abstract class enemybase : MonoBehaviour
             currentHealth = currentHealth - 1;
             checkIfDead();
         }
-    
+
+        if (collision.gameObject.tag == "SwordBullets")
+        {
+
+            Instantiate(particle, transform.position, transform.rotation);
+            currentHealth = currentHealth - 5;
+            checkIfDead();
+        }
+
     }
 
     protected virtual void checkIfDead() {
