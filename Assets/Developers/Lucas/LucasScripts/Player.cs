@@ -63,6 +63,10 @@ public class Player : MonoBehaviour
             JumpSound.Play();
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
         }
+        if (Input.GetKey(KeyCode.S) && !grounded) 
+        {
+            rb.AddForce(jump * -(jumpForce / 3), ForceMode.Impulse);
+        }
     }
     private void Update()
     {
