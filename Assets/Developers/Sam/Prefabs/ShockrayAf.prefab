@@ -111,13 +111,12 @@ MonoBehaviour:
   tijdelijkWin: {fileID: 0}
   bulletPrefab: {fileID: 9126164845390546553, guid: d6d31a4948cd60543a7dba596de551ea, type: 3}
   firePoint: {fileID: 4021979893514665694}
-  raySpeed: 0.5
+  raySpeed: 0.75
   rayHeight: 1
-  rayWaves: 4
-  rayLength: 8
+  rayWaves: 7
+  rayLength: 7
   stingrayAttack: {fileID: -5874305215745569742}
   enemyHit: {fileID: 6953960344017642439}
-  yOffset: 0
 --- !u!82 &-5874305215745569742
 AudioSource:
   m_ObjectHideFlags: 0

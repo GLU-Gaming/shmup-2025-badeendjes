@@ -17,7 +17,6 @@ public class rayMain : enemybase
     public AudioSource stingrayAttack;
     public AudioSource enemyHit;
 
-    public float yOffset;
 
     public override void Start()
     {
