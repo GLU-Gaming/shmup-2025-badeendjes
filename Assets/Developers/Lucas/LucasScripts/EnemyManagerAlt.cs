@@ -11,7 +11,7 @@ public class ObjectSpawner : MonoBehaviour
     public GameObject Bocto;
     public List<GameObject> objectsToSpawn = new List<GameObject>();
     //private int[] Enemies = new int[] { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 2, 2, 3, 3, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 1, 1, 1 };
-    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 1/*4, 1, 4, 6, 7, 1*/};
+    private int[] SpawnOrder = new int[] {3, 3, 5, 5, 4, 8, 4, 1, 4, 6, 7, 1};
     private int Order = -1;
     private Vector3 SpawnPoint = new Vector3(10, 0, -2);
     private Vector3 MovePoint = new Vector3(7, 2, 0);
@@ -65,7 +65,7 @@ public class ObjectSpawner : MonoBehaviour
                 GameObject go = Instantiate(objectsToSpawn[Object], SpawnPoint, Quaternion.identity);
                 currentEnemies.Add(go);
             }
-            if (objectsToSpawn[Object] == Bocto) 
+            else if (objectsToSpawn[Object] == Bocto) 
             {
                 fightMusic.Stop();
                 bossFightMusic.Play();
@@ -93,7 +93,10 @@ public class ObjectSpawner : MonoBehaviour
         if (controlsTimer >= 4f) 
         {
             Controls.SetActive(false);
-            StartCoroutine(SpawnNextWave());
+            //StartCoroutine(SpawnNextWave());
+            controlCheck = false;
+            //controlsTimer = 0f;
+            
         }
         if (objectsToSpawn == null) 
         {
@@ -115,6 +118,7 @@ public class ObjectSpawner : MonoBehaviour
         {
             Order = Order + 1;
             StartCoroutine(SpawnNextWave());
+            
         
         
         }
