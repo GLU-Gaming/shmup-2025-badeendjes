@@ -90,8 +90,8 @@ MonoBehaviour:
   firePoint: {fileID: 6778256801153177977}
   srimpSpeed: 1
   srimpHeight: 1
-  srimpWaves: 6
-  srimpLength: 7
+  srimpWaves: 4
+  srimpLength: 10
   pistolShrimpAttack: {fileID: 5806061460111434091}
   enemyHit: {fileID: -3781630333352459153}
 --- !u!65 &728521906745760961
