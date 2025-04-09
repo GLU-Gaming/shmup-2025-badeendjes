@@ -5,7 +5,7 @@ public class PlayerShooting : MonoBehaviour
 {
     [SerializeField] private GameObject Shrimp;
     [SerializeField] private GameObject SwordFish;
-    [SerializeField] private float Cooldown = 1f;
+    [SerializeField] private float Cooldown = 0.2f;
     private float cooldownCounter;
     private bool isShooting;
     private bool shrimpWeaponActive = true;
@@ -23,7 +23,7 @@ public class PlayerShooting : MonoBehaviour
         {
             if (cooldownCounter >= Cooldown)
             {
-                Debug.Log("POW");
+                //Debug.Log("POW");
                 Instantiate(currentWeapon, transform.position, transform.rotation);
                 cooldownCounter = 0;
                 if (shrimpWeaponActive) 
@@ -41,11 +41,13 @@ public class PlayerShooting : MonoBehaviour
         {
             shrimpWeaponActive = false;
             currentWeapon = SwordFish;
+            Cooldown = 1f;
         }
         else if (Input.GetKeyDown(KeyCode.Q) && !shrimpWeaponActive)
         {
             shrimpWeaponActive = true;
             currentWeapon = Shrimp;
+            Cooldown = 0.4f;
         }
         cooldownCounter += Time.deltaTime;
 
