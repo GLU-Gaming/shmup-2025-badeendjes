@@ -98,7 +98,7 @@ public class ObjectSpawner : MonoBehaviour
             //controlsTimer = 0f;
             
         }
-        if (objectsToSpawn == null) 
+        if (objectsToSpawn.Count == 0) 
         {
             SceneManager.LoadScene("YouWinScreen");
         }
@@ -107,14 +107,14 @@ public class ObjectSpawner : MonoBehaviour
            
             if (currentEnemies[i] == null)
             {
-                Debug.Log("GRAAAAAAAGHHHHHH");
+                
              
                 currentEnemies.Remove(currentEnemies[i]);
                 objectsToSpawn.Remove(objectsToSpawn[i]);
             }
         }
 
-        if (currentEnemies.Count <= 0 && controlsTimer >= 4f) 
+        if (currentEnemies.Count <= 0 && controlsTimer >= 4f && objectsToSpawn.Count != 0) 
         {
             Order = Order + 1;
             StartCoroutine(SpawnNextWave());
