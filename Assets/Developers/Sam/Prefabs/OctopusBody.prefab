@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 978430b8fe00ff44993cafb263dde5e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 20
+  maxHealth: 60
   particle: {fileID: 7539490239567763107, guid: 80662dd62e0e24542a4767d83f1b2064, type: 3}
   enemyHit: {fileID: -9158274813397302906}
 --- !u!82 &-9158274813397302906

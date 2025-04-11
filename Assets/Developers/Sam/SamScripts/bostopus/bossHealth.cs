@@ -1,5 +1,6 @@
 using UnityEngine;
 using static UnityEngine.ParticleSystem;
+using UnityEngine.SceneManagement;
 
 public class bossHealth : MonoBehaviour
 {
@@ -40,7 +41,8 @@ public class bossHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
-           
+            SceneManager.LoadScene("YouWinScreen");
+
 
         }
 

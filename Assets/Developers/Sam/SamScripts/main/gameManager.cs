@@ -57,7 +57,7 @@ public class gameManager : MonoBehaviour
 
         if (lives <= 0)
         {
-           //SceneManager.LoadScene("EndScreen");
+           SceneManager.LoadScene("EndScreen");
         } 
 
     }

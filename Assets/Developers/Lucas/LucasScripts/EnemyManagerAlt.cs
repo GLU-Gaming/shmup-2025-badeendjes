@@ -98,7 +98,7 @@ public class ObjectSpawner : MonoBehaviour
             //controlsTimer = 0f;
             
         }
-        if (objectsToSpawn.Count == 0) 
+        if (objectsToSpawn == null) 
         {
             SceneManager.LoadScene("YouWinScreen");
         }
